@@ -4,10 +4,16 @@ public class Application {
 
     public static void main(String[] args) {
 
-        if (args.length < 1) {
-            System.out.println("Please provide an argument");
+        int a = Integer.parseInt(args[0]);
+
+        if (a % 3 == 0) {
+            System.out.println("Fizz");
+        } else if (a % 5 == 0) {
+            System.out.println("Buzz");
+        } else if (a % 3 == 0 && a % 5 == 0) {
+            System.out.println("FizzBuzz");
         } else {
-            System.out.println(String.format("Argument provided: %s", args[0]));
+            System.out.println(Integer.toString(a));
         }
     }
 }
