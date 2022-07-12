@@ -6,14 +6,19 @@ public class Application {
 
         int a = Integer.parseInt(args[0]);
 
-        if (a % 3 == 0) {
-            System.out.println("Fizz");
-        } else if (a % 5 == 0) {
-            System.out.println("Buzz");
-        } else if (a % 3 == 0 && a % 5 == 0) {
-            System.out.println("FizzBuzz");
+        System.out.println(fizzBuzz(a));
+    }
+
+    public static String fizzBuzz(int num) {
+
+        if (num % 3 == 0 && num % 5 == 0) {
+            return "FizzBuzz";
+        } else if (num % 5 == 0) {
+            return "Buzz";
+        } else if (num % 3 == 0) {
+            return "Fizz";
         } else {
-            System.out.println(Integer.toString(a));
+            return Integer.toString(num);
         }
     }
 }
